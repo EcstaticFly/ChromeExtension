@@ -1,22 +1,26 @@
 {
-    "name": "ColorScoop",
-    "description": "A Chrome extension that can be used to pick colors fron any webpage and copy the hexcode to clipboard.",
-    "version": "1.0",
-    "manifest_version": 3,
-    "background": {
-        "service_worker": "background.js"
-    },
-    "permissions":[
-        "activeTab",
-        "scripting"
-    ],
-    "action": {
-        "default_popup": "popup.html"
-    },
-    "icons": {
-        "16": "/images/picker_16.png",
-        "32": "images/picker_32.png",
-        "48": "/images/picker_48.png"
-    }
-
+  "name": "ColorScoop",
+  "description": "A Chrome extension that can be used to pick colors from any webpage and copy the hexcode to clipboard.",
+  "version": "1.0",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": [
+    "storage", 
+    "activeTab", 
+    "scripting"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Pick a color from the page"
+  },
+  "icons": {
+    "16": "/images/picker_16.png",
+    "32": "/images/picker_32.png",
+    "48": "/images/picker_48.png"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self';"
+  }
 }
